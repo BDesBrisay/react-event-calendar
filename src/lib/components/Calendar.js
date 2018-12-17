@@ -3,19 +3,19 @@ import dateFns from 'date-fns';
 
 import './Calendar.css';
 
-const isInArray = (array, date) => {
-  return !!array.find((item) => {
-    return item.getTime() === date.getTime()
-  });
-}
+const isInArray = (array, date) => (
+  !!array.find((item) => item.getTime() === date.getTime())
+);
 
 class Calendar extends React.Component {
   state = {
     currentMonth: new Date(),
     selectedDate: new Date(),
     eventDates: [
-      new Date('December 26, 2018 00:00:00'),
-      new Date('December 24, 2018 00:00:00')
+      new Date('Sun Dec 24 2018 00:00:00'),
+      new Date('Sun Dec 27 2018 00:00:00'),
+      new Date('Sun Dec 14 2018 00:00:00'),
+      new Date('Sun Dec 2 2018 00:00:00')
     ]
   };
 
@@ -75,16 +75,19 @@ class Calendar extends React.Component {
         console.log(day)
         days.push(
           <div
-            className={`col cell ${
-              !dateFns.isSameMonth(day, monthStart)
-                ? 'disabled'
-                : dateFns.isSameDay(day, selectedDate) ? 'selected' : ''
-              } ${isInArray(this.state.eventDates, day) ? 'event' : ''
-            }`}
+            className={`col cell${!dateFns.isSameMonth(day, monthStart) ? ' disabled' : ''}`}
             key={day}
             onClick={() => this.onDateClick(dateFns.parse(cloneDay))}
           >
-            <span className="number">{formattedDate}</span>
+            <div 
+              className={`innerCell${
+                isInArray(this.state.eventDates, day) ? ' event' : ''
+              }${
+                dateFns.isSameDay(day, selectedDate) ? ' selected' : ''
+              }`}
+            >
+              <span className="number">{formattedDate}</span>
+            </div>
           </div>
         );
         day = dateFns.addDays(day, 1);
