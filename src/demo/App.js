@@ -1,11 +1,9 @@
 import React from 'react';
-import Example from '../lib';
-import { SecondExample } from '../lib';
+import Calendar from '../lib';
 
 const App = () => (
   <div>
-    <Example />
-    <SecondExample />
+    <Calendar />
   </div>
 );
 
