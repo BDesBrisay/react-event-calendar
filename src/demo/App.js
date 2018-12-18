@@ -21,6 +21,8 @@ const App = () => (
         next: { paddingRight: 30, color: 'lightblue' },
         daysRow: { background: '#bbb' },
         days: { color: 'white' },
+        body: { background: 'lightyellow' },
+        numberRow: { padding: '0 20px', boxSizing: 'border-box' },
         cell: { paddingTop: 10 },
         innerCell: { borderRadius: 5 },
         number: { fontSize: 16 },

@@ -19,10 +19,7 @@ class Calendar extends React.Component {
     const { customStyles } = this.props;
 
     return (
-      <div 
-        className="header row" 
-        style={customStyles.header}
-      >
+      <div className="header row" style={customStyles.header}>
         <div 
           className="col col-start"
           style={customStyles.prev} 
@@ -30,10 +27,7 @@ class Calendar extends React.Component {
         >
           <div className="icon">chevron_left</div>
         </div>
-        <div 
-          className="col col-center"
-          style={customStyles.title}
-        >
+        <div className="col col-center" style={customStyles.title}>
           <span>{label}</span>
         </div>
         <div 
@@ -124,12 +118,18 @@ class Calendar extends React.Component {
       }
 
       rows.push(
-        <div className="row" key={day}>{days}</div>
+        <div 
+          key={day}
+          className="row"
+          style={customStyles.numberRow}
+        >
+          {days}
+        </div>
       );
 
       days = [];
     }
-    return <div className="body">{rows}</div>;
+    return <div className="body" style={customStyles.body}>{rows}</div>;
   }
 
   onDateClick = day => {
@@ -146,8 +146,9 @@ class Calendar extends React.Component {
   };
 
   render() {
+    const { customStyles } = this.props;
     return (
-      <div className="calendar">
+      <div className="calendar" style={customStyles.calendar}>
         {this.renderHeader()}
         {this.renderDays()}
         {this.renderCells()}
@@ -170,6 +171,8 @@ Calendar.defaultProps = {
     next: {},
     days: {},
     daysRow: {},
+    body: {},
+    numberRow: {},
     cell: {},
     innerCell: {},
     number: {},
