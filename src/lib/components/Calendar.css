@@ -48,7 +48,8 @@
   --secondary: #ff777b;
   --text: #777;
   --text-color: #999;
-  --disabled: #ccc;
+  --disabled: #bbb;
+  --outside: #ddd;
   --border: #eee;
   --bg: #f9f9f9;
   --neutral: #fff;
@@ -179,6 +180,7 @@
 
 .calendar .body .outside {
   pointer-events: none;
+  color: var(--outside)
 }
 
 .calendar .body .col {
