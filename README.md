@@ -8,7 +8,7 @@ To install this package into your project run `npm install --save react-event-ca
 
 ## Usage
 
-A simple calendar component will us ehte following code
+A simple calendar component will use the following code
 
 ```
 import React from 'react';
