@@ -1,11 +1,11 @@
 {
   "name": "react-date-picker-calendar",
-  "version": "1.0.2",
+  "version": "1.0.7",
   "description": "react calendar for picking dates and displaying events",
-  "main": "build/index.js",
+  "main": "src/lib/index.js",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/BDesBrisay/react-event-calendar"
+    "type": "git",
+    "url": "https://github.com/BDesBrisay/react-event-calendar"
   },
   "scripts": {
     "start": "node scripts/start.js",
@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@babel/core": "7.1.0",
+    "@babel/plugin-proposal-class-properties": "^7.2.1",
     "@svgr/webpack": "2.4.1",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "9.0.0",
@@ -121,6 +122,9 @@
   "babel": {
     "presets": [
       "react-app"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties"
     ]
   }
 }
