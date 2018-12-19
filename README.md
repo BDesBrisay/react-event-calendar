@@ -22,7 +22,7 @@ const App = () => (
 
 export default App;
 ```
-<img src="https://github.com/BDesBrisay/react-event-calendar/blob/master/normalCal.png" width="300" />
+<img src="https://raw.githubusercontent.com/BDesBrisay/react-event-calendar/master/normalCal.png" width="300" />
 
 For more customization use the props
 
@@ -67,7 +67,7 @@ const App = () => (
 export default App;
 ```
 
-<img src="https://github.com/BDesBrisay/react-event-calendar/blob/master/wackyCal.png" width="300" />
+<img src="https://raw.githubusercontent.com/BDesBrisay/react-event-calendar/master/wackyCal.png" width="300" />
 
 ## Documentation
 
