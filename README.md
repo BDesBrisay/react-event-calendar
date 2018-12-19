@@ -66,6 +66,33 @@ const App = () => (
 export default App;
 ```
 
+## Documentation
+
+| Prop Name | Defualt | Description |
+| `onChange` | `(val) => {}` | Pass your own function that recieves the new value as a prop |
+| `selectedDate` | `new Date()` | The starting date of the calendar view, defaults to today |
+| `selectedMonth` | `new Date()` | The starting month of the calendar view, defaults to today |
+| `eventDates` | `[]` | An array of event dates to render on calendar as events |
+| `minDate` | `undefined` | A minimum date for date selection purposes |
+| `maxDate` | `undefined` | A maximum date for date selection purposes |
+| `customStyles` | ```{
+    header: {},
+    title: {},
+    prev: {},
+    next: {},
+    days: {},
+    daysRow: {},
+    body: {},
+    numberRow: {},
+    cell: {},
+    innerCell: {},
+    number: {},
+    selected: {},
+    event: {},
+    disabled: {},
+    outOfRange: {}
+  }``` | A custom style object for every single element in the calendar
+
 ## Demo app
 
 Is located inside `src/demo` directory, here you can test your library while developing
