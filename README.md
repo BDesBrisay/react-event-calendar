@@ -68,30 +68,15 @@ export default App;
 
 ## Documentation
 
-| Prop Name | Defualt | Description |
-| `onChange` | `(val) => {}` | Pass your own function that recieves the new value as a prop |
-| `selectedDate` | `new Date()` | The starting date of the calendar view, defaults to today |
-| `selectedMonth` | `new Date()` | The starting month of the calendar view, defaults to today |
-| `eventDates` | `[]` | An array of event dates to render on calendar as events |
-| `minDate` | `undefined` | A minimum date for date selection purposes |
-| `maxDate` | `undefined` | A maximum date for date selection purposes |
-| `customStyles` | ```{
-    header: {},
-    title: {},
-    prev: {},
-    next: {},
-    days: {},
-    daysRow: {},
-    body: {},
-    numberRow: {},
-    cell: {},
-    innerCell: {},
-    number: {},
-    selected: {},
-    event: {},
-    disabled: {},
-    outOfRange: {}
-  }``` | A custom style object for every single element in the calendar
+| Prop Name | Type | Defualt | Description |
+|-----------|------|---------|-------------|
+| `onChange` | `function` | `(val) => {}` | Pass your own function that recieves the new value as a prop |
+| `selectedDate` | `Date` | `new Date()` | The starting date of the calendar view, defaults to today |
+| `selectedMonth` | `Date` | `new Date()` | The starting month of the calendar view, defaults to today |
+| `eventDates` | `array`| `[]` | An array of event dates to render on calendar as events |
+| `minDate` | `Date` | `undefined` | A minimum date for date selection purposes |
+| `maxDate` | `Date` | `undefined` | A maximum date for date selection purposes |
+| `customStyles` | `Object` | <pre>{<br/>&nbsp;header: {},<br/>&nbsp;title: {},<br/>&nbsp;prev: {},<br/>&nbsp;next: {},<br/>&nbsp;days: {},<br/>&nbsp;daysRow: {},<br/>&nbsp;body: {},<br/>&nbsp;numberRow: {},<br/>&nbsp;cell: {},<br/>&nbsp;innerCell: {},<br/>&nbsp;number: {},<br/>&nbsp;selected: {},<br/>&nbsp;event: {},<br/>&nbsp;disabled: {},<br/>&nbsp;outOfRange: {}<br/>}</pre> | A custom style object for every single element in the calendar
 
 ## Demo app
 
