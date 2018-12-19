@@ -32,7 +32,7 @@ import Calendar from '../lib';
 const App = () => (
   <div>
     <Calendar 
-      /*onChange={(val) => {console.log(val)}}
+      onChange={(val) => {console.log(val)}}
       selectedDate={new Date('Dec 18 2018')}
       selectedMonth={new Date('Dec 18 2018')}
       eventDates={[
@@ -58,7 +58,7 @@ const App = () => (
         event: { background: 'teal', color: 'white' },
         extra: { color: 'green' },
         outOfRange: { color: 'red', fontWeight: '400' }
-      }}*/
+      }}
     />
   </div>
 );
