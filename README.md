@@ -1,10 +1,10 @@
-# React Event Calendar and Date Picker
+# React Date Picker Calendar
 
 A React calendar component used for picking a date and displaying events on days. It is extremely simple, yet has extensive customizability to fit your needs. 
 
 ## Getting Started
 
-To install this package into your project run `npm install --save react-event-calendar`
+To install this package into your project run `npm install --save react-date-picker-calendar`
 
 ## Usage
 
@@ -12,7 +12,7 @@ A simple calendar component will use the following code
 
 ```
 import React from 'react';
-import Calendar from 'react-event-calendar';
+import Calendar from 'react-date-picker-calendar';
 
 const App = () => (
   <div>
@@ -22,13 +22,13 @@ const App = () => (
 
 export default App;
 ```
-<img src="./normalCal.png" width="300" />
+<img src="https://github.com/BDesBrisay/react-event-calendar/blob/master/normalCal.png" width="300" />
 
 For more customization use the props
 
 ```
 import React from 'react';
-import Calendar from '../lib';
+import Calendar from 'react-date-picker-calendar';
 
 const App = () => (
   <div>
@@ -67,16 +67,16 @@ const App = () => (
 export default App;
 ```
 
-<img src="./wackyCal.png" width="300" />
+<img src="https://github.com/BDesBrisay/react-event-calendar/blob/master/wackyCal.png" width="300" />
 
 ## Documentation
 
 | Prop Name | Type | Defualt | Description |
 |-----------|------|---------|-------------|
-| `onChange` | `function` | `(val) => {}` | Pass your own function that recieves the new value as a prop |
+| `onChange` | `Function` | `(val) => {}` | Pass your own function that recieves the new value as a prop |
 | `selectedDate` | `Date` | `new Date()` | The starting date of the calendar view, defaults to today |
 | `selectedMonth` | `Date` | `new Date()` | The starting month of the calendar view, defaults to today |
-| `eventDates` | `array`| `[]` | An array of event dates to render on calendar as events |
+| `eventDates` | `Array`| `[]` | An array of event dates to render on calendar as events |
 | `minDate` | `Date` | `undefined` | A minimum date for date selection purposes |
 | `maxDate` | `Date` | `undefined` | A maximum date for date selection purposes |
 | `customStyles` | `Object` | <pre>{<br/>&nbsp;header: {},<br/>&nbsp;title: {},<br/>&nbsp;prev: {},<br/>&nbsp;next: {},<br/>&nbsp;days: {},<br/>&nbsp;daysRow: {},<br/>&nbsp;body: {},<br/>&nbsp;numberRow: {},<br/>&nbsp;cell: {},<br/>&nbsp;innerCell: {},<br/>&nbsp;number: {},<br/>&nbsp;selected: {},<br/>&nbsp;event: {},<br/>&nbsp;disabled: {},<br/>&nbsp;outOfRange: {}<br/>}</pre> | A custom style object for every single element in the calendar
@@ -87,16 +87,3 @@ Is located inside `src/demo` directory, here you can test your library while dev
 
 To get a demo running locally, in the root directory of the project run `npm start`
 
-## Testing
-
-`npm run test` or `yarn run test`
-
-## Build library
-
-`npm run build` or `yarn run build`
-
-Produces production version of library under the `build` folder.
-
-## Publish library
-
-`npm publish`
