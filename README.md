@@ -1,49 +1,76 @@
-# React NPM library starter kit
+# React Event Calendar and Date Picker
 
-[![Build Status](https://travis-ci.org/DimiMikadze/create-react-library.svg?branch=master)](https://travis-ci.org/DimiMikadze/create-react-library)
-[![Dependencies](https://img.shields.io/david/DimiMikadze/create-react-library.svg)]()
-[![Dev Dependencies](https://img.shields.io/david/dev/DimiMikadze/create-react-library.svg)]()
-
-based on Facebook's <a href="https://github.com/facebookincubator/create-react-app" target="_blank">Create react app</a>.
-We are constantly updating repository with the updates of `create-react-app`, so we have all new features and bug fixes of it.
-
-## Converted to custom setup
-
-Moved all dependencies to dev dependencies because we don't need extra dependencies for our library after build, but we want all this features while developing: 
-
-* React, JSX, ES6, and Flow syntax support.
-* Language extras beyond ES6 like the object spread operator.
-* A dev server that lints for common errors.
-* Import CSS and image files directly from JavaScript.
-* Autoprefixed CSS, so you don’t need `-webkit` or other prefixes.
-* A `build` script to bundle JS, CSS, and images for production.
+A React calendar component used for picking a date and displaying events on days. It is extremely simple, yet has extensive customizability to fit your needs. 
 
 ## Getting Started
 
-Clone repo
+To install this package into your project run `npm install --save react-event-calendar`
 
-````
-git clone https://github.com/DimiMikadze/create-react-library.git
-````
+## Usage
 
-Install dependencies
+A simple calendar component will us ehte following code
 
-`npm install` or `yarn install`
+```
+import React from 'react';
+import Calendar from 'react-event-calendar';
 
-Start development server
+const App = () => (
+  <div>
+    <Calendar />
+  </div>
+);
 
-`npm start` or `yarn start`
+export default App;
+```
 
-Runs the demo app in development mode.
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+For more customization use the props
 
-## Library files
+```
+import React from 'react';
+import Calendar from '../lib';
 
-All library files are located inside `src/lib`  
+const App = () => (
+  <div>
+    <Calendar 
+      /*onChange={(val) => {console.log(val)}}
+      selectedDate={new Date('Dec 18 2018')}
+      selectedMonth={new Date('Dec 18 2018')}
+      eventDates={[
+        new Date('Dec 13 2018'),
+        new Date('Dec 21 2018'),
+        new Date('Dec 24 2018')
+      ]}
+      minDate={new Date('Dec 10 2018')}
+      maxDate={new Date('Jan 3 2019')}
+      customStyles={{
+        header: { paddingBottom: 10 },
+        title: { textTransform: 'uppercase' },
+        prev: { paddingLeft: 30, color: 'blue' },
+        next: { paddingRight: 30, color: 'lightblue' },
+        daysRow: { background: '#bbb' },
+        days: { color: 'white' },
+        body: { background: 'lightyellow' },
+        numberRow: { padding: '0 20px', boxSizing: 'border-box' },
+        cell: { paddingTop: 10 },
+        innerCell: { borderRadius: 5 },
+        number: { fontSize: 16 },
+        selected: { background: 'purple' },
+        event: { background: 'teal', color: 'white' },
+        extra: { color: 'green' },
+        outOfRange: { color: 'red', fontWeight: '400' }
+      }}*/
+    />
+  </div>
+);
+
+export default App;
+```
 
 ## Demo app
 
 Is located inside `src/demo` directory, here you can test your library while developing
+
+To get a demo running locally, in the root directory of the project run `npm start`
 
 ## Testing
 
@@ -58,7 +85,3 @@ Produces production version of library under the `build` folder.
 ## Publish library
 
 `npm publish`
-
-## Example library built with this starter kit
-
-https://github.com/DimiMikadze/react-under-construction
