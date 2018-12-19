@@ -1,7 +1,7 @@
 {
-  "name": "react-event-calendar",
+  "name": "react-date-picker-calendar",
   "version": "1.0.0",
-  "description": "react calendar for events",
+  "description": "react calendar for picking dates and displaying events",
   "main": "build/index.js",
   "scripts": {
     "start": "node scripts/start.js",
