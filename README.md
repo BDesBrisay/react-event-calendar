@@ -22,6 +22,7 @@ const App = () => (
 
 export default App;
 ```
+<img src="./normalCal.png" width="300" />
 
 For more customization use the props
 
@@ -65,6 +66,8 @@ const App = () => (
 
 export default App;
 ```
+
+<img src="./wackyCal.png" width="300" />
 
 ## Documentation
 
